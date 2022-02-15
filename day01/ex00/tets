@@ -1,0 +1,8 @@
+Implémentez la fonction suivante dans le fichier approprié :
+Zombie* zombieHorde( int N, std::string name );
+Il doit allouer N objets Zombie en une seule allocation. Ensuite, il doit initialiser le
+zombies, en donnant à chacun d'eux le nom passé en paramètre. La fonction renvoie un
+pointeur vers le premier zombie.
+Implémentez vos propres tests pour vous assurer que votre fonction zombieHorde() fonctionne comme prévu.
+Essayez d'appeler annoncer () pour chacun des zombies.
+N'oubliez pas de supprimer tous les zombies et de vérifier les fuites de mémoire.
