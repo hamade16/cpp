@@ -1,4 +1,5 @@
 #include "ScavTrap.hpp"
+// utliser shallow copy a la place de deep copy
 
 ScavTrap::ScavTrap()
 {

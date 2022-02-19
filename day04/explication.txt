@@ -1,0 +1,4 @@
+fonction virtuelle pure fournissant un cadre d'interface
+
+on doit implemente seulement les pure virtual function
+

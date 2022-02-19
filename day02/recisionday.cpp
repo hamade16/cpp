@@ -9,6 +9,9 @@ l;operator egale s'appel l'opeerator d'assignation
 
 floating point : 
 
+
+
+-------------------------
 85.125 0:            85 -----> 01010101
 0.125   ------> 001
 85.125 ----> 1010101.001
