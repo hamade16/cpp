@@ -1,8 +1,8 @@
 #include "ShrubberyCreationForm.hpp"
 
- ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form(target, 0,145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("shrubbery creation", 0, 145, 137), _target(target)
 {
-    std::cout << this->getName() << std::endl;
+
     
 }
 
@@ -11,6 +11,17 @@ ShrubberyCreationForm::ShrubberyCreationForm()
 
 }
 
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm  const & src) : Form(src)
+{
+
+}
+
+ShrubberyCreationForm   ShrubberyCreationForm::operator=(ShrubberyCreationForm const & src)
+{
+    Form::operator=(src);
+    this->_target = src._target;
+    return (*this);
+}
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
@@ -51,6 +62,5 @@ void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
         "______369____36936__________369___11\n"
         "______________369________________11\n";
     file.close();
-
-    std::cout << "The form " << this->getName() << " was executed!" << std::endl;
+    std::cout << "The form " << this->_target << " was executed!" << std::endl;
 }

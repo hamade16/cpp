@@ -1,13 +1,16 @@
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main()
 {
 	try
 	{
-		Bureaucrat c("bureau", 66);
-		ShrubberyCreationForm abc("Maro");
-		abc.beSigned( c );
+		srand (time(NULL));
+		Bureaucrat c("bureau", 30);
+		RobotomyRequestForm abc("Maro");
+		//abc.beSigned( c );
+		//abc.execute(c);
 		abc.execute(c);
         //f.beSigned(c);
 		// c.signForm(f);
