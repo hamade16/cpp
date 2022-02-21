@@ -71,6 +71,10 @@ void    Bureaucrat::signForm(Form const &src)
         std::cout << src.getName() << " couldn't sign " << _name << " dosen't have permission" << std::endl;
 }
 
+void	Bureaucrat::executeForm(Form const & form)
+{
+	
+}
 
 std::ostream& operator<< ( std::ostream& os, const Bureaucrat& b) {
 

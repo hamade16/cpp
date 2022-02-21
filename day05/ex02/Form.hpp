@@ -24,6 +24,7 @@ class   Form
         int         getG_signe(void) const;
         int         getG_execute(void) const;
         void    beSigned(Bureaucrat b);
+        virtual void    execute(Bureaucrat const & executor) const = 0;
 
         class GradeTooHighException : public std::exception
         {
@@ -40,8 +41,16 @@ class   Form
 			    {
 				    return ("The given grade is too low");
 			    }
-
 	    };
+
+        class FormIsNotSigned : public std::exception
+        {
+            public:
+                virtual const char* what() const throw()
+			    {
+				    return ("The form is not signed!");
+			    }
+        };
 
 };
 

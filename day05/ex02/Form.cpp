@@ -21,10 +21,17 @@ Form&    Form::operator=(Form const & s)
     return (*this);
 }
 
+void    Form::execute(Bureaucrat const & executor) const
+{
+
+}
+
 Form::~Form()
 {
    
 }
+
+
 
 std::string Form::getName(void) const
 {
