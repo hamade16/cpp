@@ -6,7 +6,7 @@
 /*   By: houbeid <houbeid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 01:29:59 by houbeid           #+#    #+#             */
-/*   Updated: 2022/02/22 12:04:36 by houbeid          ###   ########.fr       */
+/*   Updated: 2022/02/22 14:31:14 by houbeid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,19 @@ void phoneBook::add(int len)
 	++len;
 }
 
+int index_valid(int d_len)
+{
+	std::string input;
+	std::cout << "\n\nIndex => ";
+	std::getline(std::cin, input);
+	if (input[0] == '\0' || input[1] != '\0')
+		return (-1);
+	int indx = int(input[0] - '0');
+	if (indx > 7 || indx >= d_len)
+		return (-1);
+	return (indx);
+}
+
 void    phoneBook::search(int tmp)
 {
     int d = 0;
@@ -114,13 +127,19 @@ void    phoneBook::search(int tmp)
         std::cout << std::setw(10) << norm_output(contact[d].getnick()) << "|" << std::endl;
         d++;
     }
-    std::cout << "entrez ind:";
-    std::cin >> ind;
+   ind = index_valid(tmp);
+   while (1)
+   if (ind == -1)
+		std::cout << "\n\033[1;31mInvalid index\033[0m\n\n" ;
+	else
+	{
     std::cout << "first name: " << contact[ind].getfhirst() << std::endl;
-    std::cout << "last name: " << contact[ind].getlast() << std::endl;
     std::cout << "nickneam: " << contact[ind].getnick() << std::endl;
-    std::cout << "phone number: " << contact[ind].getphone() << std::endl;
     std::cout << "darkest_secret: " << contact[ind].getdark() << std::endl;    
+    std::cout << "last name: " << contact[ind].getlast() << std::endl;
+    std::cout << "phone number: " << contact[ind].getphone() << std::endl;
+	}
+		
 }
 
 void    phoneBook::exitt(void)
