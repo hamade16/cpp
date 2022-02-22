@@ -1,4 +1,4 @@
-#include "contact.class.h"
+#include "contact.h"
 
 void contact::setfhirst(std::string first)
 {
