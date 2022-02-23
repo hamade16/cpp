@@ -1,5 +1,9 @@
 #include "zombie.h"
 
+zombie::zombie()
+{
+
+}
 
 zombie::~zombie(void)
 {
@@ -14,5 +18,5 @@ void    zombie::annonce(void)
 
 void    zombie::setname(std::string Name)
 {
-    name = Name;
+    this->name = Name;
 }

@@ -1,14 +1,18 @@
 #include "HumanB.h"
 
-HumanB::HumanB(std::string name): weapon()
+HumanB::HumanB(std::string name)
 {
     this->name = name;
     return ;
 }
 
+HumanB::~HumanB(void)
+{
+
+}
+
 void    HumanB::setWeapon(Weapon &weapon){
     
-    std::cout << &weapon << " " << this->weapon << std::endl;
     this->weapon = &weapon;
 }
 

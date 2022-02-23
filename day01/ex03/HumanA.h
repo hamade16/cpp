@@ -5,11 +5,13 @@
 #include "Weapon.h"
 
 class HumanA{
+    private:
+      std::string name;
+
     public:
       Weapon &weapon;
       HumanA(std::string name, Weapon &weapon);
-      std::string name;
       void  attack(void);
-      //~HumanA(void);
+      ~HumanA(void);
 };
 #endif
