@@ -22,7 +22,7 @@ class Dog : public Animal
     public:
         Dog();
         Dog(Dog const & src);
-        Dog operator=(Dog const &);
+        Dog operator=(Dog const &);;/-
         ~Dog();
 
         std::string getType(void) const;
